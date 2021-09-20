@@ -1,0 +1,25 @@
+nbm_1 = int(input('Entrez un premier nombre :'))
+nbm_2 = int(input('Entrez un second nombre :'))
+
+if nbm_1 < nbm_2:
+    print('Le deuxieme nombre est plus grand')
+else:
+    print("Le premier nombre est plus grand")
+
+
+
+1
+-----------------------------------------
+2
+
+nbm_1 = int(input('Entrez un premier nombre :'))
+nbm_2 = int(input('Entrez un deuxieme nombre :'))
+nbm_3 = int(input('Entrez un troisieme nombre :'))
+
+
+if nbm_1 > nbm_2 and nbm_1 > nbm_3:
+        print('Le premier nombre est le plus grand')
+if nbm_2 > nbm_1 and nbm_2 > nbm_3:
+    print('Le deuxieme nombre est le plus grand')
+if nbm_3 > nbm_2 and nbm_3 > nbm_1:
+    print('Le troisieme nombre est le plus grand')
