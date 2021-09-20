@@ -1,0 +1,12 @@
+texte = "Les licences Creative Commons sont fondées sur le droit d’auteur. Alors que le régime du droit d’auteur classique vous incite à garder l’exclusivité sur la totalité de vos droits (« tous droits réservés »), ces licences vous encouragent à n’en conserver qu’une partie (« certains droits réservés »). Creative Commons travaille avec des experts en droit d’auteur dans le monde entier pour que ces licences soient valides quelle que soit la juridiction. Ces licences permettent au public d’utiliser vos œuvres, sous certaines conditions, selon vos préférences."
+dico = {'a': 'e', 'e': 'a', 'i': 'o', 'o': 'i'}
+txt_m = ""
+
+
+
+for i in texte:
+    if i in dico:
+        txt_m += dico [i]
+    else:
+        txt_m += i
+print(txt_m)
