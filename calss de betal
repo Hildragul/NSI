@@ -1,0 +1,46 @@
+class Maillon:
+    def __init__(self,valeur=None,suivant=None):
+        self.__valeur=valeur
+        self.__suivant=suivant
+    def get_valeur(self):
+        return self.__valeur
+    def get_suivant(self):
+        return self.__suivant
+    def set_valeur(self,new_valeur):
+        self.__valeur=new_valeur
+    def set_suivant(self,new_suivant):
+        self.__suivant=new_suivant
+    def est_vide(self):
+        return self.__valeur ==None
+    
+class Liste_chainee():
+    def __init__(self,tete=None,queue=None):
+        self.maillon_tete= Maillon(tete,queue)
+    def get_tete(self):
+        return self.maillon_tete.get_valeur()
+    def est_vide(self):
+        return self.maillon_tete.est_vide()
+    def get_queue(self):
+        maillon_courant = self.maillon_tete
+        while not maillon_courant.get_suivant().est_vide():
+            maillon_courant = maillon_courant.get_suivant()
+        return maillon_courant.get_valeur()
+    def get_list(self):
+        res = []
+        maillon_courant = self.maillon_tete
+        while not maillon_courant.get_suivant().est_vide():
+            res.append(maillon_courant.get_valeur())
+            maillon_courant = maillon_courant.get_suivant()
+        return res
+    def __repr__(self):
+        res = []
+        res.append(self.maillon_tete)
+        return 
+    
+    
+vide=Maillon()
+a=Maillon('D',vide)
+t=Maillon('C',a)
+s=Maillon('B',t)
+n=Maillon('A',s)
+i=Liste_chainee('I',n)
